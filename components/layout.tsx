@@ -1,3 +1,5 @@
+import Windex from "./windex";
+
 interface LayoutProps {
   children?: React.ReactNode;
 }
@@ -18,6 +20,9 @@ export default function Layout({ children }: LayoutProps) {
         <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
         </main>
+          <div className="flex flex-col items-center justify-center w-full h-16 bg-slate-900">
+        <Windex/>
+          </div>
       </div>
     </div>
   );

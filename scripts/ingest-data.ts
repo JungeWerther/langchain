@@ -4,7 +4,7 @@ import { PineconeStore } from 'langchain/vectorstores';
 import { pinecone } from '@/utils/pinecone-client';
 import { CustomPDFLoader } from '@/utils/customPDFLoader';
 import { PINECONE_INDEX_NAME, PINECONE_NAME_SPACE } from '@/config/pinecone';
-import { DirectoryLoader } from 'langchain/document_loaders';
+import { CSVLoader, DirectoryLoader, TextLoader } from 'langchain/document_loaders';
 
 /* Name of directory to retrieve your files from */
 const filePath = 'docs';
@@ -14,6 +14,10 @@ export const run = async () => {
     /*load raw docs from the all files in the directory */
     const directoryLoader = new DirectoryLoader(filePath, {
       '.pdf': (path) => new CustomPDFLoader(path),
+      '.txt': (path) => new TextLoader(path),
+      '.mdx': (path) => new TextLoader(path),
+      '.md': (path) => new TextLoader(path),
+      '.csv': (path) => new CSVLoader(path, 'text')
     });
 
     // const loader = new PDFLoader(filePath);
