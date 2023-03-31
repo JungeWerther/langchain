@@ -27,7 +27,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'What\'s up, meat-bitch?',
+        message: 'Over and out. I am Nietzsche Bot. Ask me anything.',
         type: 'apiMessage',
       },
     ],
