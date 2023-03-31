@@ -15,7 +15,10 @@ export const run = async () => {
     const directoryLoader = new DirectoryLoader(filePath, {
       '.pdf': (path) => new CustomPDFLoader(path),
       '.txt': (path) => new TextLoader(path),
-      '.mdx': (path) => new TextLoader(path),
+      '.tsx': (path) => new TextLoader(path),
+      '.cjs': (path) => new TextLoader(path),
+      '.js': (path) => new TextLoader(path),
+      '.ts': (path) => new TextLoader(path),
       '.md': (path) => new TextLoader(path),
       '.csv': (path) => new CSVLoader(path, 'text')
     });

@@ -1,24 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
 
 # next.js
-/.next/
-/out/
-/docs/
+.next
+out
+output.txt
 
 # production
-/build
+build
 
 # misc
 .DS_Store
 *.pem
+.gitignore
 
 # debug
 npm-debug.log*
@@ -36,7 +37,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-output.txt
 
 #Notion_db
-/Notion_DB
+Notion_DB
+
+config
+declarations
+public
+pnpm-lock.yaml
+visual-guide

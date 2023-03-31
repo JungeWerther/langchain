@@ -1,4 +1,4 @@
-import Windex from "./windex";
+// import Windex from "./windex";
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -21,7 +21,6 @@ export default function Layout({ children }: LayoutProps) {
           {children}
         </main>
           <div className="flex flex-col items-center justify-center w-full h-16 bg-slate-900">
-        <Windex/>
           </div>
       </div>
     </div>
